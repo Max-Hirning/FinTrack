@@ -6,7 +6,7 @@ import { UpdateModuleDto } from './dto/update-module.dto';
 import { SignUpModuleDto } from './dto/create-module.dto';
 
 @Injectable()
-export class ModuleService {
+export class UserService {
   constructor(@InjectModel('Users') private readonly userModel: Model<IUser>) {}
 
   async signUp(signUpModuleDto: SignUpModuleDto) {

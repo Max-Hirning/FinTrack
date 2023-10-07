@@ -1,12 +1,12 @@
 import bcrypt from 'bcrypt';
-import { ModuleService } from './module.service';
+import { UserService } from './module.service';
 import { UpdateModuleDto } from './dto/update-module.dto';
 import { SignUpModuleDto, SignInModuleDto } from './dto/create-module.dto';
 import { Controller, Get, Post, Body, Put, Param, Delete } from '@nestjs/common';
 
 @Controller('user')
-export class ModuleController {
-  constructor(private readonly moduleService: ModuleService) {}
+export class UserController {
+  constructor(private readonly moduleService: UserService) {}
 
   @Post('/sign-up/')
   async signUp(@Body() signUpModuleDto: SignUpModuleDto) {

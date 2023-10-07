@@ -1,4 +1,4 @@
-import { ICategory } from './types';
+import { ICategory } from '../types';
 import { Injectable } from '@nestjs/common';
 import entryCategories from '../../constants/entryCategories.json';
 

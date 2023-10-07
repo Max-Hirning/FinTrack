@@ -1,0 +1,392 @@
+[
+  {
+    "id": "1",
+    "title": "Food & Drinks",
+
+    "nodes": [
+      {
+        "id": "1.1",
+        "title": "Food & Drinks"
+      },
+      {
+        "id": "1.2",
+        "title": "Bar, cafe"
+      },
+      {
+        "id": "1.3",
+        "title": "Groceries"
+      },
+      {
+        "id": "1.4",
+        "title": "Restaurant, fast food"
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "title": "Shopping",
+
+    "nodes": [
+      {
+        "id": "2.1",
+        "title": "Shopping"
+      },
+      {
+        "id": "2.2",
+        "title": "Pharmacy"
+      },
+      {
+        "id": "2.3",
+        "title": "Electronics, accessories"
+      },
+      {
+        "id": "2.4",
+        "title": "Free time"
+      },
+      {
+        "id": "2.5",
+        "title": "Gift, joy"
+      },
+      {
+        "id": "2.6",
+        "title": "Health and beauty"
+      },
+      {
+        "id": "2.7",
+        "title": "Home, garden"
+      },
+      {
+        "id": "2.8",
+        "title": "Jewels, accessories"
+      },
+      {
+        "id": "2.9",
+        "title": "Kids"
+      },
+      {
+        "id": "2.10",
+        "title": "Pets, animals"
+      },
+      {
+        "id": "2.11",
+        "title": "Stationery, tools"
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "title": "Housing",
+
+    "nodes": [
+      {
+        "id": "3.1",
+        "title": "Housing"
+      },
+      {
+        "id": "3.2",
+        "title": "Energy, utilities"
+      },
+      {
+        "id": "3.3",
+        "title": "Maintenance, repairs"
+      },
+      {
+        "id": "3.4",
+        "title": "Mortage"
+      },
+      {
+        "id": "3.5",
+        "title": "Property insurance"
+      },
+      {
+        "id": "3.6",
+        "title": "Rent"
+      },
+      {
+        "id": "3.7",
+        "title": "Services"
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "title": "Transportation",
+
+    "nodes": [
+      {
+        "id": "4.1",
+        "title": "Transportation"
+      },
+      {
+        "id": "4.2",
+        "title": "Bussiness trips"
+      },
+      {
+        "id": "4.3",
+        "title": "Long distance"
+      },
+      {
+        "id": "4.4",
+        "title": "Public transport"
+      },
+      {
+        "id": "4.5",
+        "title": "Taxi"
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "title": "Vehicle",
+
+    "nodes": [
+      {
+        "id": "5.1",
+        "title": "Vehicle"
+      },
+      {
+        "id": "5.2",
+        "title": "Fuel"
+      },
+      {
+        "id": "5.3",
+        "title": "Leasing"
+      },
+      {
+        "id": "5.4",
+        "title": "Parking"
+      },
+      {
+        "id": "5.5",
+        "title": "Rentals"
+      },
+      {
+        "id": "5.6",
+        "title": "Vehicle insurance"
+      },
+      {
+        "id": "5.7",
+        "title": "Vehicle maintenance"
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "title": "Life & Entertainment",
+
+    "nodes": [
+      {
+        "id": "6.1",
+        "title": "Life & Entertainment"
+      },
+      {
+        "id": "6.2",
+        "title": "Active sport, fitness"
+      },
+      {
+        "id": "6.3",
+        "title": "Alcohol, tobacco"
+      },
+      {
+        "id": "6.4",
+        "title": "Books, audio, subscriptions"
+      },
+      {
+        "id": "6.5",
+        "title": "Charity, gifts"
+      },
+      {
+        "id": "6.6",
+        "title": "Cultyre, sport events"
+      },
+      {
+        "id": "6.7",
+        "title": "Education, development"
+      },
+      {
+        "id": "6.8",
+        "title": "Health care, doctor"
+      },
+      {
+        "id": "6.9",
+        "title": "Hobbies"
+      },
+      {
+        "id": "6.10",
+        "title": "Holiday, trips, hotels"
+      },
+      {
+        "id": "6.11",
+        "title": "Life events"
+      },
+      {
+        "id": "6.12",
+        "title": "Lottery, gambling"
+      },
+      {
+        "id": "6.13",
+        "title": "TV, Streaming"
+      },
+      {
+        "id": "6.14",
+        "title": "Wellness, beauty"
+      }
+    ]
+  },
+  {
+    "id": "7",
+    "title": "Communication, PC",
+
+    "nodes": [
+      {
+        "id": "7.1",
+        "title": "Communication, PC"
+      },
+      {
+        "id": "7.2",
+        "title": "Internet"
+      },
+      {
+        "id": "7.3",
+        "title": "Phone, cell phone"
+      },
+      {
+        "id": "7.4",
+        "title": "Postal services"
+      },
+      {
+        "id": "7.5",
+        "title": "Software, apps, games"
+      }
+    ]
+  },
+  {
+    "id": "8",
+    "title": "Financial expenses",
+
+    "nodes": [
+      {
+        "id": "8.1",
+        "title": "Financial expenses"
+      },
+      {
+        "id": "8.2",
+        "title": "Advisory"
+      },
+      {
+        "id": "8.3",
+        "title": "Charges, fees"
+      },
+      {
+        "id": "8.4",
+        "title": "Child support"
+      },
+      {
+        "id": "8.5",
+        "title": "Fines"
+      },
+      {
+        "id": "8.6",
+        "title": "Insurance"
+      },
+      {
+        "id": "8.7",
+        "title": "Loan, interesys"
+      },
+      {
+        "id": "8.8",
+        "title": "Taxes"
+      }
+    ]
+  },
+  {
+    "id": "9",
+    "title": "Investments",
+
+    "nodes": [
+      {
+        "id": "9.1",
+        "title": "Investments"
+      },
+      {
+        "id": "9.2",
+        "title": "Collections"
+      },
+      {
+        "id": "9.3",
+        "title": "Financial investments"
+      },
+      {
+        "id": "9.4",
+        "title": "Realty"
+      },
+      {
+        "id": "9.5",
+        "title": "Savings"
+      },
+      {
+        "id": "9.6",
+        "title": "Vehicles, chattels"
+      }
+    ]
+  },
+  {
+    "id": "10",
+    "title": "Income",
+
+    "nodes": [
+      {
+        "id": "10.1",
+        "title": "Income"
+      },
+      {
+        "id": "10.2",
+        "title": "Checks, coupons"
+      },
+      {
+        "id": "10.3",
+        "title": "Child Support"
+      },
+      {
+        "id": "10.4",
+        "title": "Dues & grants"
+      },
+      {
+        "id": "10.5",
+        "title": "Gifts"
+      },
+      {
+        "id": "10.6",
+        "title": "Interests, dividends"
+      },
+      {
+        "id": "10.7",
+        "title": "Lending, renting"
+      },
+      {
+        "id": "10.8",
+        "title": "Lottery, gambling"
+      },
+      {
+        "id": "10.9",
+        "title": "Refunds (tax, purchase)"
+      },
+      {
+        "id": "10.10",
+        "title": "Rental income"
+      },
+      {
+        "id": "10.11",
+        "title": "Sale"
+      },
+      {
+        "id": "10.12",
+        "title": "Wage, invoices"
+      }
+    ]
+  },
+  {
+    "id": "11",
+    "title": "Others"
+  }
+]

@@ -4,8 +4,8 @@ import { SignUpModuleDto } from '../../../auth/module/dto/create-module.dto';
 
 export class UpdateModuleDto extends PartialType(SignUpModuleDto) {
   @IsString()
-  name: string;
+    name: string;
 
   @IsEmail()
-  email: string;
+    email: string;
 }

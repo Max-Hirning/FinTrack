@@ -3,13 +3,13 @@ import { IsString, IsNotEmpty, IsNumber } from 'class-validator';
 export class CreateModuleDto {
   @IsString()
   @IsNotEmpty()
-  title: string;
+    title: string;
 
   @IsNumber()
   @IsNotEmpty()
-  ammount: number;
+    ammount: number;
 
   @IsString()
   @IsNotEmpty()
-  currencyId: string;
+    currencyId: string;
 }

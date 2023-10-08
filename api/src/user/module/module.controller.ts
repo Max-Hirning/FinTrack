@@ -1,7 +1,7 @@
 import { IReturnedUser } from '../types';
 import { UserService } from './module.service';
 import { UpdateModuleDto } from './dto/update-module.dto';
-import { JwtAuthGuard } from "../../auth/module/auth.guard";
+import { JwtAuthGuard } from '../../auth/module/auth.guard';
 import { UseGuards, Controller, Get, Body, Put, Param, Delete } from '@nestjs/common';
 
 @Controller('user')

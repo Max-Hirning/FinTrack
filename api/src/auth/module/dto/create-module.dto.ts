@@ -2,19 +2,19 @@ import { IsEmail, IsNotEmpty } from 'class-validator';
 
 export class SignInModuleDto {
   @IsEmail()
-  email: string;
+    email: string;
 
   @IsNotEmpty()
-  password: string;
+    password: string;
 }
 
 export class SignUpModuleDto {
   @IsNotEmpty()
-  name: string;
+    name: string;
 
   @IsEmail()
-  email: string;
+    email: string;
 
   @IsNotEmpty()
-  password: string;
+    password: string;
 }

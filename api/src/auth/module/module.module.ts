@@ -1,5 +1,5 @@
 import { Module } from '@nestjs/common';
-import { JwtModule } from "@nestjs/jwt";
+import { JwtModule } from '@nestjs/jwt';
 import { userSchema } from 'src/user/model';
 import { AuthService } from './module.service';
 import { MongooseModule } from '@nestjs/mongoose';

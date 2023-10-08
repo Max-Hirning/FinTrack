@@ -1,5 +1,5 @@
 import { Model } from 'mongoose';
-import { JwtService } from "@nestjs/jwt";
+import { JwtService } from '@nestjs/jwt';
 import { IUser } from '../../user/types';
 import { ITokeResponse } from '../types';
 import { InjectModel } from '@nestjs/mongoose';
@@ -34,6 +34,6 @@ export class AuthService {
   private generateToken({ id }: IUser): ITokeResponse {
     return {
       token: this.jwtService.sign(id)
-    }
-}
+    };
+  }
 }

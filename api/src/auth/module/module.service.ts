@@ -1,6 +1,7 @@
 import { Model } from 'mongoose';
 import { JwtService } from "@nestjs/jwt";
 import { IUser } from '../../user/types';
+import { ITokeResponse } from '../types';
 import { InjectModel } from '@nestjs/mongoose';
 import { SignUpModuleDto } from './dto/create-module.dto';
 import { Injectable, HttpException, HttpStatus } from '@nestjs/common';
@@ -9,33 +10,30 @@ import { Injectable, HttpException, HttpStatus } from '@nestjs/common';
 export class AuthService {
   constructor(@InjectModel('Users') private readonly userModel: Model<IUser>, private readonly jwtService: JwtService) {}
   
-  async signUp(signUpModuleDto: SignUpModuleDto) {
+  async signUp(signUpModuleDto: SignUpModuleDto): Promise<string> {
     await this.userModel.create(signUpModuleDto);
     return 'User was created';
   }
 
-  async signIn(user: IUser) {
+  signIn(user: IUser): ITokeResponse {
     return this.generateToken(user);
   }
 
-  async validateUser(email: string): Promise<IUser | undefined> {
+  async validateUser(email: string): Promise<IUser> {
     const result = await this.userModel.findOne({ email });
     if (result) throw new HttpException('Such user already exists', HttpStatus.BAD_REQUEST);
-    
     return result;
   }
 
-  async findByEmail(email: string): Promise<IUser | undefined> {
+  async findByEmail(email: string): Promise<IUser> {
     const result = await this.userModel.findOne({ email });
     if (!result) throw new HttpException('There is no such user', HttpStatus.BAD_REQUEST);
-    
     return result;
   }
 
-  private async generateToken({ name, email, id }: IUser) {
-    const payload = { email, id, name };
+  private generateToken({ id }: IUser): ITokeResponse {
     return {
-        token: this.jwtService.sign(payload)
+      token: this.jwtService.sign(id)
     }
 }
 }

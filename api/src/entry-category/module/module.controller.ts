@@ -1,3 +1,4 @@
+import { ICategory } from '../types';
 import { Controller, Get } from '@nestjs/common';
 import { EntryCategoryService } from './module.service';
 
@@ -6,7 +7,7 @@ export class EntryCategoryController {
   constructor(private readonly moduleService: EntryCategoryService) {}
 
   @Get()
-  findAll() {
+  findAll(): ICategory[] {
     return this.moduleService.findAll();
   }
 }

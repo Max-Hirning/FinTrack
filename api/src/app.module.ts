@@ -3,6 +3,7 @@ import { AppService } from './app.service';
 import { AppController } from './app.controller';
 import { MongooseModule } from '@nestjs/mongoose';
 import { UserModule } from './user/module/module.module';
+import { AuthModule } from './auth/module/module.module';
 import { CurrencyModule } from './currency/module/module.module';
 import { EntryTypeModule } from './entry-type/module/module.module';
 import { EntryCategoryModule } from './entry-category/module/module.module';
@@ -10,6 +11,7 @@ import { EntryCategoryModule } from './entry-category/module/module.module';
 @Module({
   imports: [
     UserModule,
+    AuthModule,
     CurrencyModule,
     EntryTypeModule,
     EntryCategoryModule,

@@ -1,5 +1,5 @@
 export interface IEntry {
-  date: Date;
+  date: string;
   typeId: string;
   ammount: number;
   accountId: string;

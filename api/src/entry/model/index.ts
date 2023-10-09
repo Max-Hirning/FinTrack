@@ -6,5 +6,5 @@ export const entrySchema = new Schema({
   ammount: { type: Number, required: true },
   accountId: { type: String, required: true },
   categoryId: { type: String, required: true },
-  description: { type: String, required: true },
+  description: { type: String, required: false, default: '' },
 });

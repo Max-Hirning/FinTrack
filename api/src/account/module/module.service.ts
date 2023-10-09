@@ -1,14 +1,17 @@
 import { Model } from 'mongoose';
 import { IAccount } from '../types';
+import { IEntry } from 'src/entry/types';
 import { InjectModel } from '@nestjs/mongoose';
 import { UpdateModuleDto } from './dto/update-module.dto';
-import { Injectable, HttpException, HttpStatus } from '@nestjs/common';
+import { UserService } from 'src/user/module/module.service';
+import { Injectable, Inject, HttpException, HttpStatus } from '@nestjs/common';
 
 @Injectable()
 export class AccountService {
-  constructor(@InjectModel('Accounts') private readonly accountModel: Model<IAccount>) {}
+  constructor(@Inject(UserService) private readonly userService: UserService, @InjectModel('Accounts') private readonly accountModel: Model<IAccount>, @InjectModel('Entries') private readonly entryModel: Model<IEntry>) {}
 
   async create(createModuleDto: IAccount) {
+    await this.userService.findOne(createModuleDto.ownerId);
     await this.accountModel.create(createModuleDto);
     return 'Account was created';
   }
@@ -31,6 +34,7 @@ export class AccountService {
   }
 
   async remove(id: string) {
+    await this.entryModel.deleteMany({ accountId: id });
     await this.accountModel.deleteOne({ _id: id });
     return 'Account was successfully deleted';
   }

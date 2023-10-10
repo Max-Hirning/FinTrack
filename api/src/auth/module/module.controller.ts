@@ -26,7 +26,7 @@ export class AuthController {
       const user = await this.moduleService.findByEmail(signInModuleDto.email);
       const isPassValid = await bcrypt.compareSync(signInModuleDto.password, user.password);
       if (isPassValid) return this.moduleService.signIn(user);
-      throw new HttpException('Incorrect password', HttpStatus.BAD_REQUEST);
+      throw new HttpException('Invalid password', HttpStatus.BAD_REQUEST);
     } catch (error) {
       console.error(error);
     }

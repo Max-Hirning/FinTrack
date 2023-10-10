@@ -12,7 +12,7 @@ export class AuthService {
   
   async signUp(signUpModuleDto: SignUpModuleDto): Promise<string> {
     await this.userModel.create(signUpModuleDto);
-    return 'User was created';
+    return 'Account was created';
   }
 
   signIn(user: IUser): ITokeResponse {
@@ -27,7 +27,7 @@ export class AuthService {
 
   async findByEmail(email: string): Promise<IUser> {
     const result = await this.userModel.findOne({ email });
-    if (!result) throw new HttpException('There is no such user', HttpStatus.BAD_REQUEST);
+    if (!result) throw new HttpException('User not found', HttpStatus.BAD_REQUEST);
     return result;
   }
 

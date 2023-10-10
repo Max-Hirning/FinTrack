@@ -17,16 +17,18 @@ export class UserService {
   }
 
   async update(id: string, updateModuleDto: UpdateModuleDto): Promise<string> {
+    await this.findOne(id);
     await this.userModel.updateOne({ _id: id }, updateModuleDto);
-    return 'Changes were successfully saved';
+    return 'Changes were saved';
   }
 
   async remove(id: string): Promise<string> {
+    await this.findOne(id);
     const result = await this.accountModel.find({ ownerId: id }, ['_id']);
 
     await this.entryModel.deleteMany({ accountId: result });
     await this.accountModel.deleteMany({ _id: result });
     await this.userModel.deleteOne({ _id: id });
-    return 'User was successfully deleted';
+    return 'User was deleted';
   }
 }

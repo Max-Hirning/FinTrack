@@ -28,9 +28,11 @@ export class EntryService {
 
   async update(id: string, updateModuleDto: UpdateModuleDto): Promise<string> {    
     if(updateModuleDto.accountId) {
-      const entry = await this.entryModel.findOne({ _id: id });
+      const entry = await this.findOne(id);
       const prevAccount = await this.accountModel.findOne({ _id: entry.accountId });
+      if(!prevAccount) throw new HttpException('Smth went wrong', HttpStatus.BAD_REQUEST);
       const newAccount = await this.accountModel.findOne({ _id: updateModuleDto.accountId });
+      if(!newAccount) throw new HttpException('Smth went wrong', HttpStatus.BAD_REQUEST);
 
       await this.accountModel.updateOne({ _id: prevAccount._id }, { ammount: this.changeAccountAmmount(entry.typeId, true, prevAccount.ammount, entry.ammount) });
       await this.accountModel.updateOne({ _id: newAccount._id }, { ammount: this.changeAccountAmmount(entry.typeId, false, newAccount.ammount, entry.ammount) });
@@ -38,8 +40,9 @@ export class EntryService {
     }
 
     if(updateModuleDto.ammount) {
-      const entry = await this.entryModel.findOne({ _id: id });
+      const entry = await this.findOne(id);
       const account = await this.accountModel.findOne({ _id: entry.accountId });
+      if(!account) throw new HttpException('Smth went wrong', HttpStatus.BAD_REQUEST);
       const prevAccountAmmount = this.changeAccountAmmount(entry.typeId, true, account.ammount, entry.ammount);
 
       await this.accountModel.updateOne({ _id: account._id }, { ammount: prevAccountAmmount });
@@ -48,8 +51,9 @@ export class EntryService {
     }
 
     if(updateModuleDto.typeId) {
-      const entry = await this.entryModel.findOne({ _id: id });
+      const entry = await this.findOne(id);
       const account = await this.accountModel.findOne({ _id: entry.accountId });
+      if(!account) throw new HttpException('Smth went wrong', HttpStatus.BAD_REQUEST);
 
       await this.accountModel.updateOne({ _id: account._id }, { ammount: this.changeAccountAmmount(updateModuleDto.typeId, false, account.ammount, entry.ammount*2) });
       await this.entryModel.updateOne({ _id: id }, { typeId: updateModuleDto.typeId });
@@ -70,8 +74,9 @@ export class EntryService {
   }
 
   async remove(id: string): Promise<string> {
-    const entry = await this.entryModel.findOne({ _id: id });
+    const entry = await this.findOne(id);
     const account = await this.accountModel.findOne({ _id: entry.accountId });
+    if(!account) throw new HttpException('Smth went wrong', HttpStatus.BAD_REQUEST);
 
     await this.accountModel.updateOne({ _id: account._id }, { ammount:  this.changeAccountAmmount(entry.typeId, true, account.ammount, entry.ammount)});
     await this.entryModel.deleteOne({ _id: id });

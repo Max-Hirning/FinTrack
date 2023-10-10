@@ -13,7 +13,7 @@ export class EntryController {
   @Post()
   create(@Body() createModuleDto: CreateModuleDto): Promise<string> {
     try {
-      return this.moduleService.create({ ...createModuleDto, ammount: +createModuleDto.ammount, date: (new Date()).toJSON() });
+      return this.moduleService.create({ ...createModuleDto, date: (new Date()).toJSON() });
     } catch (error) {
       console.error(error);
     }

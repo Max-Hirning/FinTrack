@@ -11,28 +11,16 @@ export class UserController {
 
   @Get(':id')
   findOne(@Param('id') id: string): Promise<IReturnedUser> {
-    try {
-      return this.moduleService.findOne(id);
-    } catch (error) {
-      console.error(error);
-    }
+    return this.moduleService.findOne(id);
   }
 
   @Put(':id')
   update(@Param('id') id: string, @Body() updateModuleDto: UpdateModuleDto): Promise<string> {
-    try {
-      return this.moduleService.update(id, updateModuleDto);
-    } catch (error) {
-      console.error(error);
-    }
+    return this.moduleService.update(id, updateModuleDto);
   }
 
   @Delete(':id')
   remove(@Param('id') id: string): Promise<string> {
-    try {
-      return this.moduleService.remove(id);
-    } catch (error) {
-      console.error(error);
-    }
+    return this.moduleService.remove(id);
   }
 }

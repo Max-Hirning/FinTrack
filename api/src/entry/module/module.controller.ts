@@ -12,47 +12,27 @@ export class EntryController {
 
   @Post()
   create(@Body() createModuleDto: CreateModuleDto): Promise<string> {
-    try {
-      return this.moduleService.create({ ...createModuleDto, date: (new Date()).toJSON() });
-    } catch (error) {
-      console.error(error);
-    }
+    return this.moduleService.create({ ...createModuleDto, date: (new Date()).toJSON() });
   }
 
   @Get()
   findAll(@Query() { to, from }: ISearchEntriesQuery) {
-    try {
-      if(to && from) return this.moduleService.findAll({to, from});
-      throw new HttpException('Provide necessary data', HttpStatus.BAD_REQUEST);
-    } catch (error) {
-      console.error(error);
-    }
+    if(to && from) return this.moduleService.findAll({to, from});
+    throw new HttpException('Provide necessary data', HttpStatus.BAD_REQUEST);
   }
 
   @Get(':id')
   findOne(@Param('id') id: string): Promise<IEntry> {
-    try {
-      return this.moduleService.findOne(id);
-    } catch (error) {
-      console.error(error);
-    }
+    return this.moduleService.findOne(id);
   }
 
   @Put(':id')
   update(@Param('id') id: string, @Body() updateModuleDto: UpdateModuleDto): Promise<string> {
-    try {
-      return this.moduleService.update(id, updateModuleDto);
-    } catch (error) {
-      console.error(error);
-    }
+    return this.moduleService.update(id, updateModuleDto);
   }
 
   @Delete(':id')
   remove(@Param('id') id: string): Promise<string> {
-    try {
-      return this.moduleService.remove(id);
-    } catch (error) {
-      console.error(error);
-    }
+    return this.moduleService.remove(id);
   }
 }

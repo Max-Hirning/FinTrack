@@ -11,46 +11,26 @@ export class AccountController {
 
   @Post(':ownerId')
   create(@Param('ownerId') ownerId: string, @Body() createModuleDto: CreateModuleDto) {
-    try {
-      return this.moduleService.create({ ...createModuleDto, ownerId });
-    } catch (error) {
-      console.error(error);
-    }
+    return this.moduleService.create({ ...createModuleDto, ownerId });
   }
 
   @Get('/owner/:id')
   findAll(@Param('id') id: string) {
-    try {
-      return this.moduleService.findAllByOwner(id);
-    } catch (error) {
-      console.error(error);
-    }
+    return this.moduleService.findAllByOwner(id);
   }
 
   @Get(':id')
   findOne(@Param('id') id: string) {
-    try {
-      return this.moduleService.findOne(id);
-    } catch (error) {
-      console.error(error);
-    }
+    return this.moduleService.findOne(id);
   }
 
   @Put(':id')
   update(@Param('id') id: string, @Body() updateModuleDto: UpdateModuleDto) {
-    try {
-      return this.moduleService.update(id, updateModuleDto);
-    } catch (error) {
-      console.error(error);
-    }
+    return this.moduleService.update(id, updateModuleDto);
   }
 
   @Delete(':id')
   remove(@Param('id') id: string) {
-    try {
-      return this.moduleService.remove(id);
-    } catch (error) {
-      console.error(error);
-    }
+    return this.moduleService.remove(id);
   }
 }

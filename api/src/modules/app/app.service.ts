@@ -1,6 +1,6 @@
 import { JwtService } from '@nestjs/jwt';
+import { ITokeResponse } from '../auth/types';
 import { Injectable, HttpStatus, HttpException } from '@nestjs/common';
-import { ITokeResponse } from './auth/types';
 
 @Injectable()
 export class AppService {

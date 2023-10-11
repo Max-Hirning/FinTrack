@@ -2,7 +2,7 @@ import { EntryService } from './module.service';
 import { IEntry, ISearchEntriesQuery } from '../types';
 import { CreateModuleDto } from './dto/create-module.dto';
 import { UpdateModuleDto } from './dto/update-module.dto';
-import { JwtAuthGuard } from 'src/auth/module/auth.guard';
+import { JwtAuthGuard } from '../../auth/module/auth.guard';
 import { UseGuards, Query, Controller, Get, Post, Body, Put, HttpException, HttpStatus, Param, Delete } from '@nestjs/common';
 
 @Controller('entry')

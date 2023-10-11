@@ -1,7 +1,7 @@
 import { AccountService } from './module.service';
 import { CreateModuleDto } from './dto/create-module.dto';
-import { JwtAuthGuard } from 'src/auth/module/auth.guard';
 import { UpdateModuleDto } from './dto/update-module.dto';
+import { JwtAuthGuard } from '../../auth/module/auth.guard';
 import { UseGuards, Controller, Get, Post, Body, Put, Param, Delete } from '@nestjs/common';
 
 @Controller('account')

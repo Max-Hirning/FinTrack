@@ -1,5 +1,5 @@
 import { Model } from 'mongoose';
-import { IAccount } from 'src/account/types';
+import { IAccount } from '../../account/types';
 import { InjectModel } from '@nestjs/mongoose';
 import { IEntry, ISearchEntriesQuery } from '../types';
 import { UpdateModuleDto } from './dto/update-module.dto';

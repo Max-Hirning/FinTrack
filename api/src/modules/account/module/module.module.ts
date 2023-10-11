@@ -1,12 +1,12 @@
 import { Module } from '@nestjs/common';
 import { accountSchema } from '../model';
-import { userSchema } from 'src/user/model';
-import { entrySchema } from 'src/entry/model';
+import { userSchema } from '../../user/model';
+import { entrySchema } from '../../entry/model';
 import { AccountService } from './module.service';
 import { MongooseModule } from '@nestjs/mongoose';
 import { AccountController } from './module.controller';
-import { AuthModule } from 'src/auth/module/module.module';
-import { UserService } from 'src/user/module/module.service';
+import { AuthModule } from '../../auth/module/module.module';
+import { UserService } from '../../user/module/module.service';
 
 @Module({
   controllers: [AccountController],

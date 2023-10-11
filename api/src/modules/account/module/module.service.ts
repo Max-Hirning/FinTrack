@@ -1,9 +1,9 @@
 import { Model } from 'mongoose';
 import { IAccount } from '../types';
-import { IEntry } from 'src/entry/types';
+import { IEntry } from '../../entry/types';
 import { InjectModel } from '@nestjs/mongoose';
 import { UpdateModuleDto } from './dto/update-module.dto';
-import { UserService } from 'src/user/module/module.service';
+import { UserService } from '../../user/module/module.service';
 import { Injectable, Inject, HttpException, HttpStatus } from '@nestjs/common';
 
 @Injectable()

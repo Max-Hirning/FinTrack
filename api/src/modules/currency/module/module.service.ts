@@ -1,6 +1,6 @@
 import { ICurrency } from '../types';
 import { Injectable } from '@nestjs/common';
-import currencies from '../../constants/currencies.json';
+import currencies from '../../../constants/currencies.json';
 
 @Injectable()
 export class CurrencyService {

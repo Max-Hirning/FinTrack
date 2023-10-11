@@ -1,6 +1,6 @@
 import { Model } from 'mongoose';
-import { IEntry } from 'src/entry/types';
-import { IAccount } from 'src/account/types';
+import { IEntry } from '../../entry/types';
+import { IAccount } from '../../account/types';
 import { InjectModel } from '@nestjs/mongoose';
 import { IReturnedUser, IUser } from '../types';
 import { UpdateModuleDto } from './dto/update-module.dto';

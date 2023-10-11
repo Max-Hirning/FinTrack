@@ -1,5 +1,5 @@
 import { AppService } from './app.service';
-import { ITokeResponse } from './auth/types';
+import { ITokeResponse } from '../auth/types';
 import { TokenModuleDto } from './dto/create-module.dto';
 import { Controller, Post, Get, Body } from '@nestjs/common';
 

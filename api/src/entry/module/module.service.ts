@@ -1,7 +1,7 @@
 import { Model } from 'mongoose';
-import { IEntry } from '../types';
 import { IAccount } from 'src/account/types';
 import { InjectModel } from '@nestjs/mongoose';
+import { IEntry, ISearchEntriesQuery } from '../types';
 import { UpdateModuleDto } from './dto/update-module.dto';
 import { Injectable, HttpException, HttpStatus } from '@nestjs/common';
 
@@ -16,8 +16,12 @@ export class EntryService {
     return 'Entry was added';
   }
 
-  async findAll() {
-    return 'This action returns all module';
+  async findAll({ to, from }: ISearchEntriesQuery) {
+    const toDate = new Date(to);
+    toDate.setDate(toDate.getDate() + 1);
+    const result = await this.entryModel.find({ date: { $gte: from, $lte: toDate } }).sort({ date: -1 });
+    if(!result) throw new HttpException('There is no entries', HttpStatus.BAD_REQUEST);
+    return result;
   }
 
   async findOne(id: string): Promise<IEntry> {

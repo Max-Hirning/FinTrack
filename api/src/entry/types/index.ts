@@ -6,3 +6,8 @@ export interface IEntry {
   categoryId: string;
   description: string;
 }
+
+export interface ISearchEntriesQuery {
+  to: string;
+  from: string;
+}

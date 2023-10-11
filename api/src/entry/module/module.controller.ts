@@ -1,9 +1,9 @@
-import { IEntry } from '../types';
 import { EntryService } from './module.service';
+import { IEntry, ISearchEntriesQuery } from '../types';
 import { CreateModuleDto } from './dto/create-module.dto';
 import { UpdateModuleDto } from './dto/update-module.dto';
 import { JwtAuthGuard } from 'src/auth/module/auth.guard';
-import { UseGuards, Controller, Get, Post, Body, Put, Param, Delete } from '@nestjs/common';
+import { UseGuards, Query, Controller, Get, Post, Body, Put, HttpException, HttpStatus, Param, Delete } from '@nestjs/common';
 
 @Controller('entry')
 @UseGuards(JwtAuthGuard)
@@ -20,9 +20,10 @@ export class EntryController {
   }
 
   @Get()
-  findAll() {
+  findAll(@Query() { to, from }: ISearchEntriesQuery) {
     try {
-      return this.moduleService.findAll();
+      if(to && from) return this.moduleService.findAll({to, from});
+      throw new HttpException('Provide necessary data', HttpStatus.BAD_REQUEST);
     } catch (error) {
       console.error(error);
     }

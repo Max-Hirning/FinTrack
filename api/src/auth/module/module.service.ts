@@ -33,7 +33,8 @@ export class AuthService {
 
   private generateToken({ id }: IUser): ITokeResponse {
     return {
-      token: this.jwtService.sign({ id })
+      token: this.jwtService.sign({ id }),
+      refreshToke: this.jwtService.sign({ id }, { expiresIn: '30d' })
     };
   }
 }

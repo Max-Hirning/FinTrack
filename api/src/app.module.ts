@@ -1,3 +1,4 @@
+import { JwtModule } from '@nestjs/jwt';
 import { Module } from '@nestjs/common';
 import { AppService } from './app.service';
 import { ConfigModule } from '@nestjs/config';
@@ -13,14 +14,20 @@ import { EntryCategoryModule } from './entry-category/module/module.module';
 
 @Module({
   imports: [
+    ConfigModule.forRoot({ envFilePath: '.env', isGlobal: true }),
     UserModule,
     AuthModule,
     EntryModule,
     AccountModule,
     CurrencyModule,
     EntryTypeModule,
+    JwtModule.register({
+      signOptions: {
+        expiresIn: process.env.JWT_TOKEN_EXPIRES_IN
+      },
+      secret: process.env.SECRET_KEY,
+    }),
     EntryCategoryModule,
-    ConfigModule.forRoot({ envFilePath: '.env', }),
     MongooseModule.forRoot(process.env.DB_URL, { dbName: 'FinTrack' }),
   ],
   providers: [AppService],

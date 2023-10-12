@@ -1,7 +1,7 @@
-import { IsEmail, IsNotEmpty, IsString } from 'class-validator';
+import { IsEmail, IsNotEmpty, IsString, IsJWT, MinLength } from 'class-validator';
 
 export class TokenModuleDto {
-  @IsString()
+  @IsJWT()
   @IsNotEmpty()
     refreshToken: string;
 }
@@ -13,6 +13,7 @@ export class SignInModuleDto {
 
   @IsString()
   @IsNotEmpty()
+  @MinLength(8)
     password: string;
 }
 
@@ -27,5 +28,6 @@ export class SignUpModuleDto {
 
   @IsString()
   @IsNotEmpty()
+  @MinLength(8)
     password: string;
 }

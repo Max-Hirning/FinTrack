@@ -1,6 +1,6 @@
 import { PartialType } from '@nestjs/mapped-types';
 import { CreateModuleDto } from './create-module.dto';
-import { IsNumber, IsNotEmpty, IsString } from 'class-validator';
+import { IsNumber, IsNotEmpty, IsString, IsDateString } from 'class-validator';
 
 export class UpdateModuleDto extends PartialType(CreateModuleDto) {
   @IsString()
@@ -21,7 +21,7 @@ export class UpdateModuleDto extends PartialType(CreateModuleDto) {
   @IsString()
     description: string;
 
-  @IsString()
   @IsNotEmpty()
+  @IsDateString()
     date: string;
 }

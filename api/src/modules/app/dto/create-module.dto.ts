@@ -1,7 +1,7 @@
-import { IsNotEmpty, IsString } from 'class-validator';
+import { IsNotEmpty, IsJWT } from 'class-validator';
 
 export class TokenModuleDto {
-  @IsString()
+  @IsJWT()
   @IsNotEmpty()
     refreshToken: string;
 }

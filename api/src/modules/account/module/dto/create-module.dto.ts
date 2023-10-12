@@ -6,7 +6,6 @@ export class CreateModuleDto {
     title: string;
 
   @IsNumber()
-  @IsNotEmpty()
     ammount: number;
 
   @IsString()

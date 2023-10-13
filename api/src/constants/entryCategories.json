@@ -56,15 +56,15 @@
         "title": "Home, garden"
       },
       {
-        "id": "2.8", //
+        "id": "2.8",
         "title": "Jewels, accessories"
       },
       {
-        "id": "2.9", //
+        "id": "2.9",
         "title": "Kids"
       },
       {
-        "id": "2.10", //
+        "id": "2.10",
         "title": "Pets, animals"
       },
       {
@@ -83,7 +83,7 @@
         "title": "Housing"
       },
       {
-        "id": "3.2", //
+        "id": "3.2",
         "title": "Energy, utilities"
       },
       {
@@ -122,11 +122,11 @@
         "title": "Bussiness trips"
       },
       {
-        "id": "4.3", //
+        "id": "4.3",
         "title": "Long distance"
       },
       {
-        "id": "4.4", //
+        "id": "4.4",
         "title": "Public transport"
       },
       {
@@ -197,7 +197,7 @@
       },
       {
         "id": "6.6",
-        "title": "Cultyre, sport events"
+        "title": "Culture, sport events"
       },
       {
         "id": "6.7",
@@ -220,15 +220,7 @@
         "title": "Life events"
       },
       {
-        "id": "6.12", //
-        "title": "Lottery, gambling"
-      },
-      {
-        "id": "6.13",
-        "title": "TV, Streaming"
-      },
-      {
-        "id": "6.14",
+        "id": "6.12",
         "title": "Wellness, beauty"
       }
     ]
@@ -244,14 +236,10 @@
       },
       {
         "id": "7.2",
-        "title": "Internet"
-      },
-      {
-        "id": "7.3",
         "title": "Phone, cell phone"
       },
       {
-        "id": "7.4",
+        "id": "7.3",
         "title": "Software, apps, games"
       }
     ]
@@ -357,7 +345,7 @@
       },
       {
         "id": "10.8",
-        "title": "Lottery, gambling"
+        "title": "Bussiness"
       },
       {
         "id": "10.9",

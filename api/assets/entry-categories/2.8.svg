@@ -1,4 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-<svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M5.21913 4.3753C5.40891 4.13809 5.69622 4 6 4H12H18C18.3038 4 18.5911 4.13809 18.7809 4.3753L22.7809 9.37531C23.0879 9.75907 23.0705 10.309 22.7399 10.6727L12.7399 21.6727C12.5504 21.8811 12.2817 22 12 22C11.7183 22 11.4496 21.8811 11.2601 21.6727L1.26006 10.6727C0.929475 10.309 0.912125 9.75907 1.21913 9.37531L5.21913 4.3753ZM6.48063 6L4.08063 9H7.51938L9.91938 6H6.48063ZM12 6.60078L10.0806 9H13.9194L12 6.60078ZM14.5723 11H9.4277L12 18.0738L14.5723 11ZM9.32559 16.5715L7.29957 11H4.26055L9.32559 16.5715ZM14.6744 16.5715L16.7004 11H19.7395L14.6744 16.5715ZM19.9194 9H16.4806L14.0806 6H17.5194L19.9194 9Z" fill="#000000"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>category_icon_jewelry</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="category_icon_jewelry" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="diamond" transform="translate(12.000000, 14.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <path d="M19.374,0 L30.348,0 L24.762,9.32207278 L19.374,0 Z M12.624,10.0093838 L18,0.708998019 L23.376,10.0093838 L12.624,10.0093838 Z M23.721,11.6776144 L18,31.4728391 L12.279,11.6776144 L23.721,11.6776144 Z M9.849,10.0093838 L0.2865,10.0093838 L4.3845,0.894171619 L9.849,10.0093838 Z M11.238,9.32207278 L5.6505,0 L16.626,0 L11.238,9.32207278 Z M26.151,10.0093838 L31.6155,0.894171619 L35.7135,10.0093838 L26.151,10.0093838 Z M25.2975,11.6776144 L35.5875,11.6776144 L19.4235,32 L25.2975,11.6776144 Z M10.7025,11.6776144 L16.5765,32 L0.4125,11.6776144 L10.7025,11.6776144 Z" id="Combined-Shape"></path>
+        </g>
+    </g>
 </svg>

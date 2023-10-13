@@ -1,10 +1,12 @@
 [
   {
     "id": "1",
-    "title": "Income"
+    "title": "Income",
+    "color": "rgb(40, 203, 124)"
   },
   {
     "id": "2",
-    "title": "Outcome"
+    "title": "Outcome",
+    "color": "rgb(231, 76, 60)"
   }
 ]

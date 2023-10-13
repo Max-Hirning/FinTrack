@@ -21,14 +21,9 @@ import { EntryCategoryModule } from '../entry-category/module/module.module';
     AccountModule,
     CurrencyModule,
     EntryTypeModule,
-    JwtModule.register({
-      signOptions: {
-        expiresIn: process.env.JWT_TOKEN_EXPIRES_IN
-      },
-      secret: process.env.SECRET_KEY,
-    }),
     EntryCategoryModule,
     MongooseModule.forRoot(process.env.DB_URL, { dbName: 'FinTrack' }),
+    JwtModule.register({ signOptions: { expiresIn: process.env.JWT_TOKEN_EXPIRES_IN }, secret: process.env.SECRET_KEY }),
   ],
   providers: [AppService],
   controllers: [AppController],

@@ -7,8 +7,16 @@ import { EntryController } from './module.controller';
 import { AuthModule } from '../../auth/module/module.module';
 
 @Module({
-  providers: [EntryService],
-  controllers: [EntryController],
-  imports: [AuthModule, MongooseModule.forFeature([{ name: 'Entries', schema: entrySchema }]), MongooseModule.forFeature([{ name: 'Accounts', schema: accountSchema }])],
+  imports: [
+    AuthModule, 
+    MongooseModule.forFeature([{ name: 'Entries', schema: entrySchema }]), 
+    MongooseModule.forFeature([{ name: 'Accounts', schema: accountSchema }])
+  ],
+  providers: [
+    EntryService
+  ],
+  controllers: [
+    EntryController
+  ],
 })
 export class EntryModule {}

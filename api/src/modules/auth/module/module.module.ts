@@ -13,15 +13,14 @@ import { AuthController } from './module.controller';
   ],
   imports: [
     ConfigModule.forRoot({ envFilePath: '.env', isGlobal: true }),
-    JwtModule.register({
-      signOptions: {
-        expiresIn: process.env.JWT_TOKEN_EXPIRES_IN
-      },
-      secret: process.env.SECRET_KEY,
-    }),
-    MongooseModule.forFeature([{ name: 'Users', schema: userSchema }])
+    MongooseModule.forFeature([{ name: 'Users', schema: userSchema }]),
+    JwtModule.register({ signOptions: { expiresIn: process.env.JWT_TOKEN_EXPIRES_IN }, secret: process.env.SECRET_KEY }),
   ],
-  providers: [AuthService],
-  controllers: [AuthController],
+  providers: [
+    AuthService
+  ],
+  controllers: [
+    AuthController
+  ],
 })
 export class AuthModule {}

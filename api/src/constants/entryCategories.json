@@ -56,15 +56,15 @@
         "title": "Home, garden"
       },
       {
-        "id": "2.8",
+        "id": "2.8", //
         "title": "Jewels, accessories"
       },
       {
-        "id": "2.9",
+        "id": "2.9", //
         "title": "Kids"
       },
       {
-        "id": "2.10",
+        "id": "2.10", //
         "title": "Pets, animals"
       },
       {
@@ -83,7 +83,7 @@
         "title": "Housing"
       },
       {
-        "id": "3.2",
+        "id": "3.2", //
         "title": "Energy, utilities"
       },
       {
@@ -122,11 +122,11 @@
         "title": "Bussiness trips"
       },
       {
-        "id": "4.3",
+        "id": "4.3", //
         "title": "Long distance"
       },
       {
-        "id": "4.4",
+        "id": "4.4", //
         "title": "Public transport"
       },
       {
@@ -220,7 +220,7 @@
         "title": "Life events"
       },
       {
-        "id": "6.12",
+        "id": "6.12", //
         "title": "Lottery, gambling"
       },
       {
@@ -252,10 +252,6 @@
       },
       {
         "id": "7.4",
-        "title": "Postal services"
-      },
-      {
-        "id": "7.5",
         "title": "Software, apps, games"
       }
     ]
@@ -310,22 +306,18 @@
       },
       {
         "id": "9.2",
-        "title": "Collections"
-      },
-      {
-        "id": "9.3",
         "title": "Financial investments"
       },
       {
-        "id": "9.4",
+        "id": "9.3",
         "title": "Realty"
       },
       {
-        "id": "9.5",
+        "id": "9.4",
         "title": "Savings"
       },
       {
-        "id": "9.6",
+        "id": "9.5",
         "title": "Vehicles, chattels"
       }
     ]
@@ -377,10 +369,6 @@
       },
       {
         "id": "10.11",
-        "title": "Sale"
-      },
-      {
-        "id": "10.12",
         "title": "Wage, invoices"
       }
     ]
